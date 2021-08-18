@@ -1,0 +1,902 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+    --article-load: 500ms;
+    --button-load-time: 800ms;
+}
+
+#preloader {
+    position: fixed;
+    z-index: 9999;
+    height: 100vh;
+    width: 100%;
+    background: #fff url('/images/Infinity-1s-200px.gif') no-repeat center;
+
+}
+
+.home {
+    background-color: rgb(211, 195, 20);
+}
+
+#main {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    text-transform: uppercase;
+
+}
+
+#main>div>h1 {
+    animation: heading-load 600ms ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateY(80px);
+    opacity: 0;
+}
+
+#mainbtn {
+    animation: main-button var(--button-load-time) ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateY(100px);
+    opacity: 0;
+
+}
+
+@keyframes heading-load {
+    0% {
+        transform: translateY(30px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
+@keyframes main-button {
+    0% {
+        transform: translateY(60px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
+#navbar {
+    text-transform: uppercase;
+}
+
+#navbar ul {
+    display: flex;
+    font-family: 'sans-serif';
+
+}
+
+#navbar ul li {
+    color: white;
+    list-style: none;
+    font-size: 1.1rem;
+    font-weight: 200;
+}
+
+#navbar ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 22px 20px;
+    color: white;
+}
+
+#navbar ul li a:hover {
+    cursor: pointer;
+    color: gray;
+}
+
+#navbar::before {
+    content: "";
+    background-image: url('/images/main-image.png');
+    background-position: center center;
+    height: 71%;
+    width: 100%;
+    top: 100px;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+.secmain {
+    background: black;
+    height: 86%;
+    width: 100%;
+    position: absolute;
+    opacity: 0.7;
+    z-index: -1;
+    top: 0px;
+}
+
+
+#mainbtn {
+    border: none;
+    padding: 10px 66px 10px 66px;
+    border-radius: 22px;
+    box-shadow: 5px;
+    margin: 20px;
+    color: white;
+    background-color: rgb(196, 75, 75);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#mainbtn:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(196, 75, 75);
+
+}
+
+.btn {
+    border: none;
+    padding: 10px 66px 10px 66px;
+    border-radius: 22px;
+    box-shadow: 5px;
+    margin: 20px;
+    color: white;
+    background-color: rgb(196, 75, 75);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(196, 75, 75);
+
+}
+
+.sectionone {
+
+    margin: 150px 0px 20px 0px;
+    color: white;
+}
+
+hr.horizontal {
+    width: 90px;
+
+    border-top: 5px solid rgb(196, 75, 75);
+    opacity: 1;
+
+}
+
+.seconediv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.seconediv h2 {
+    text-transform: uppercase;
+}
+
+.secthreediv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.secthreediv h2 {
+    text-transform: uppercase;
+}
+
+.sectionthree {
+    color: white;
+
+}
+
+.sectiontwo {
+    margin: 0px 0px 20px 0px;
+
+}
+
+.sectwodiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: white;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.tiles {
+    height: 300px;
+    width: 50%;
+    margin: 30px 10px 0px 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-transform: uppercase;
+    color: white;
+}
+
+.tiles h3 {
+    position: absolute;
+    top: 30px;
+}
+
+.userlink {
+    position: absolute;
+    top: 40px;
+    background-image: url('/images/userslogo.png');
+    background-repeat: no-repeat;
+    z-index: 1;
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-position: center center;
+    transition: all ease-in-out;
+
+}
+
+.userlink:hover {
+    cursor: pointer;
+    background-size: 60%;
+}
+
+.contractorlink {
+    position: absolute;
+    top: 40px;
+    background-image: url('/images/contractorlogo.png');
+    background-repeat: no-repeat;
+    z-index: 1;
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-position: center center;
+    transition: all ease-in-out;
+
+}
+
+.contractorlink:hover {
+    cursor: pointer;
+    background-size: 60%;
+}
+
+.contform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+/*Index page styling*/
+.indexpg {
+    display: flex;
+}
+
+.design {
+    height: 100vh;
+    background-color: rgb(14, 24, 112);
+    background-position: center;
+    width: 30%;
+    left: 0px;
+    top: 0px;
+    position: relative;
+}
+
+.form {
+    position: absolute;
+    width: 500px;
+    height: 200px;
+    right: 55vh;
+    top: 40vh;
+
+}
+
+.indheading {
+
+    align-items: center;
+    height: 200px;
+    justify-content: center;
+    display: flex;
+    right: 77vh;
+    top: 12vh;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+.designusers {
+    height: 100vh;
+    background-color: rgb(211, 195, 20);
+    ;
+    background-position: center;
+    width: 30%;
+    left: 0px;
+    top: 0px;
+    position: relative;
+}
+
+.indbtn {
+    position: absolute;
+    right: 3vh;
+}
+
+.smallbtn {
+    border: none;
+    padding: 10px 40px 10px 40px;
+    border-radius: 22px;
+    box-shadow: 5px;
+    margin: 20px;
+    color: white;
+    background-color: rgb(196, 75, 75);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.smallbtnproj {
+    border: none;
+    padding: 7px 17px 7px 17px;
+    border-radius: 22px;
+    box-shadow: 5px;
+    margin: 3px;
+    color: white;
+    background-color: rgb(196, 75, 75);
+    text-decoration: none;
+}
+
+.smallbtnproj:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(196, 75, 75);
+}
+
+.delbtn {
+    position: absolute;
+    right: 5px;
+    bottom: 2px;
+}
+
+.smallbtn:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(196, 75, 75);
+}
+
+#contractorlogin {
+    animation: login-heading 400ms ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateX(-150px);
+    opacity: 0;
+}
+
+#userslogin {
+    animation: login-heading 600ms ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateX(-150px);
+    opacity: 0;
+}
+
+@keyframes login-heading {
+    0% {
+        transform: translateX(-150px);
+
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 100%;
+    }
+}
+
+/*Cont-home-nav-styling.................................*/
+
+.cont-home-nav {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(211, 195, 20);
+    ;
+    color: white;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    left: -250px;
+    background-color: black;
+    color: white;
+    z-index: 1;
+    transition: .3s;
+}
+
+.active {
+    left: 0px;
+}
+
+.sidebar button {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 0px;
+    right: -50px;
+
+}
+
+.sidebar ul {
+    margin: 150px 10px 5px 0px;
+    padding: 20px 0px;
+    text-transform: uppercase;
+}
+
+.sidebar ul li {
+    list-style: none;
+    margin: 10px 5px 10px 0px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    padding: 20px;
+    color: white;
+}
+
+.sidebar ul li a>i {
+    padding: 6px;
+}
+
+.sidebarbtn {
+    width: 35px;
+    height: 35px;
+    position: relative;
+
+}
+
+.sidebarbtn span {
+    display: block;
+    height: 3px;
+    background-color: white;
+    border-radius: 1px;
+
+}
+
+.sidebarbtn span::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 1px;
+    transition: .3s;
+
+}
+
+.sidebarbtn span::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    border-radius: 1px;
+    transition: .3s;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+
+}
+
+.sidebarbtn.hur span {
+    background: transparent;
+}
+
+.sidebarbtn.hur span::before {
+    top: 15px;
+    transform: rotate(45deg);
+}
+
+.sidebarbtn.hur span::after {
+    bottom: 16px;
+
+    transform: rotate(-45deg);
+}
+
+/*.conthd{
+    margin: 100px auto;
+    
+    border: 1px solid black;
+    width: 500px;
+}*/
+
+.conttileeach {
+    color: white;
+    height: 154px;
+    width: 208px;
+    box-sizing: border-box;
+    margin: 10px;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.tileicon {
+    position: absolute;
+    right: 10px;
+    top: 48px;
+    opacity: 0.8;
+    transition: all .3s linear;
+
+}
+
+.conttileeach>h3 {
+    margin: 32px 0px 37px 11px
+}
+
+.conttileeach>h5 {
+    margin: 0px 0px 0px 11px
+}
+
+.totalproject {
+    background-color: rgb(5, 123, 129);
+}
+
+.inprogress {
+    background-color: rgb(17, 163, 217);
+}
+
+.completed {
+    background-color: rgb(147, 189, 113);
+}
+
+.userstile {
+    background-color: rgb(29, 31, 32);
+}
+
+.labour {
+    background-color: rgb(211, 195, 20);
+}
+
+.expense {
+    background-color: rgb(176, 80, 67);
+}
+
+.containingtables {
+    position: absolute;
+    right: 10px;
+    left: 10px;
+    width: 96%;
+    height: 100%;
+    margin: 0 10px 0px 10px;
+}
+
+/*Tabs styling */
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: rgb(196, 75, 75);
+    color: white;
+    float: left;
+    border-radius: 16px 0 0 0;
+    
+    
+    cursor: pointer;
+    padding: 7px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: white;
+    color:black;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: white;
+    color:black;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+/*createpage styling*/
+.create-page {
+    background: url('/images/tools.jpg') no-repeat center;
+    height: 100vh;
+    width: 100%;
+}
+
+.register-page {
+    background: url('/images/reguser2.jpg') no-repeat center;
+    height: 100vh;
+    width: 100%;
+}
+
+.createform {
+    color: black;
+    border: 1px solid white;
+    background: white;
+    height: 70%;
+    width: 35%;
+    position: absolute;
+    top: 18%;
+    left: 30%;
+    box-sizing: border-box;
+    border-radius: 37px;
+    animation: form 900ms ease-out;
+    animation-fill-mode: forwards;
+    transform: translateY(300px);
+}
+
+.registerform {
+    color: black;
+    border: 1px solid white;
+    background: white;
+    height: 77%;
+    width: 35%;
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    box-sizing: border-box;
+    border-radius: 37px;
+    animation: form 900ms ease-out;
+    animation-fill-mode: forwards;
+    transform: translateY(300px);
+}
+
+.registerform>h2 {
+    color: rgb(196, 75, 75);
+    text-transform: uppercase;
+
+    width: 74%;
+    margin: 15px 20px 0px 75px;
+}
+
+@keyframes form {
+    0% {
+        transform: translateY(300px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.formlength {
+    width: 87%;
+    margin: auto;
+}
+
+.createform>h2 {
+    color: rgb(196, 75, 75);
+    text-transform: uppercase;
+
+    width: 74%;
+    margin: 15px 20px 0px 75px;
+}
+
+.formheadings {
+    margin: 30px 0 5px 30px;
+    color: rgb(196, 75, 75);
+}
+
+.allprojects {
+    background: rgb(238, 238, 238);
+    height: 100vh;
+    width: 100%;
+    top: 0;
+}
+
+.project {
+    display: block;
+    background-color: white;
+    height: 154px;
+    width: 80%;
+    margin: 0px 5% 10px 8%;
+    position: relative;
+    top: 8%;
+
+    padding: 10px;
+    animation: projects 900ms ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateY(200px);
+    opacity: 0;
+
+
+
+}
+
+@keyframes projects {
+    0% {
+        transform: translateY(200px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.project>h2 {
+    margin: 54px 0px 10px 5px;
+    font-family: monospace;
+    text-transform: uppercase;
+
+}
+
+.status {
+    position: absolute;
+    top: 8px;
+    right: 29px;
+}
+
+.statusvalue {
+    position: absolute;
+    top: 28px;
+    right: 10px;
+    font-style: italic;
+    color: rgb(5, 123, 129);
+
+}
+
+.completebtn {
+    position: absolute;
+    right: 5px;
+    bottom: 50px;
+    background-color: green;
+}
+
+.inprogressbtn {
+    position: absolute;
+    right: 5px;
+    bottom: 50px;
+}
+
+.edit-page {
+    background: url('/images/updateproj.jpg') no-repeat center;
+    height: 100vh;
+    width: 100%;
+}
+
+.statusvaluecolor {
+    color: green;
+    font-style: normal;
+}
+
+.details-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 92px;
+    background-color: rgb(17, 163, 217);
+    text-decoration: none;
+    margin: 5px 5px 38px 5px;
+    border-radius: 34px;
+
+}
+
+.details-buttons:hover {
+    text-decoration: none;
+    background-color: rgb(250, 236, 236);
+    color: black;
+    cursor: pointer;
+
+}
+
+.details-options {
+    display: flex;
+
+}
+
+#detailu {
+    animation: detail 900ms ease-out;
+    animation-fill-mode: forwards;
+    transform: translateY(-100px);
+}
+
+#detailm {
+    animation: detail 950ms ease-in;
+    animation-fill-mode: forwards;
+    transform: translateY(-100px);
+}
+
+#detailw {
+    animation: detail 1000ms ease-in;
+    animation-fill-mode: forwards;
+    transform: translateY(-100px);
+}
+
+@keyframes detail {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.materialsform {
+    color: black;
+    border: 1px solid white;
+    background: white;
+    height: 91%;
+    width: 71%;
+    position: absolute;
+    top: 5%;
+    left: 13%;
+    box-sizing: border-box;
+    border-radius: 37px;
+    animation: form 900ms ease-out;
+    animation-fill-mode: forwards;
+    transform: translateY(300px);
+}
+
+.materialsform>h2 {
+    color: rgb(196, 75, 75);
+    text-transform: uppercase;
+
+    width: 74%;
+    margin: 15px 20px 0px 75px;
+}
+
+.materials-page {
+    background: url('/images/materials.jpg') no-repeat center;
+    height: 100vh;
+    width: 100%;
+}
+.workers-page{
+    background: url('/images/workers.jpg') no-repeat center;
+    height: 100vh;
+    width: 100%;
+}
+.table-buttons{
+    border: none;
+    padding: 7px 17px 7px 17px;
+    border-radius: 22px;
+    box-shadow: 5px;
+    margin: 3px;
+    color: white;
+    background-color: rgb(196, 75, 75);
+    text-decoration: none;
+    
+}
+.username{
+    background-color: white;
+    color:rgb(196, 75, 75);
+    border-radius: 5px;
+    height: 100px;
+    text-transform: uppercase;
+
+}
